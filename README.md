@@ -1,4 +1,4 @@
-# Dumindu Jayasekara
+# Dumindu Mahai Waduge
 
 **🚀 Data & AI Solutions Leader | Azure-Certified Machine Learning Expert**
 
@@ -8,13 +8,14 @@
 
 ## 📌 Table of Contents
 
-- [📄 Professional Summary](#professional-summary)
-- [🛠️ Technical Expertise](#technical-expertise)
-- [💼 Professional Experience](#professional-experience)
-- [🎓 Education & Credentials](#education--credentials)
-- [🚀 Featured Projects](#featured-projects)
-- [📞 Let's Connect](#lets-connect)
-- [📊 GitHub Activity](#github-activity)
+- [📄 Professional Summary](#-professional-summary)
+- [🛠️ Technical Expertise](#-technical-expertise)
+- [💼 Professional Experience](#-professional-experience)
+- [🎓 Education & Credentials](#-education--credentials)
+- [🚀 Featured Projects](#-featured-projects)
+- [📞 Let's Connect](#-lets-connect)
+- [📊 GitHub Activity](#-github-activity)
+
 
 ---
 
