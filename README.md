@@ -1,4 +1,4 @@
-# Hi there, I'm [Your Name] 👋
+# Hi there, I'm Dumindu 👋
 
 ### Data & AI Professional | Statistician | Azure Certified
 
@@ -13,7 +13,7 @@ Welcome to my GitHub profile! I'm a passionate Data and AI professional with a s
   - Microsoft Azure AI Engineer Associate (Dec 2022)
   - Microsoft Azure Data Scientist Associate (Oct 2021)
 - 💼 Currently working as an **Associate Tech Lead – Data & AI** at MIHCM Solutions (Pvt) Ltd, Sri Lanka.
-- 🌱 Always learning and exploring new tools and technologies in Data Science, AI, and Cloud Computing.
+- 🌱 Always learning and exploring new tools and technologies in Data Science,Machine Learning AI, and Cloud Computing.
 - 💡 Passionate about solving complex problems, building predictive models, and creating data-driven solutions.
 
 ---
@@ -25,8 +25,8 @@ Welcome to my GitHub profile! I'm a passionate Data and AI professional with a s
 - **Machine Learning**: Scikit-learn, TensorFlow, PyTorch
 - **Statistical Tools**: SPSS, SAS, STATA
 - **Cloud Platforms**: Microsoft Azure, AWS (Basic)
-- **Big Data Tools**: Apache Spark, Hadoop (Basic)
-- **Version Control**: Git, GitHub
+- **Big Data Tools**: Apache Spark, Hadoop, Hive, 
+- **Version Control**: Git, GitHub, Azure DevOps
 - **Other Tools**: Jupyter Notebook, VS Code, Docker
 
 ---
