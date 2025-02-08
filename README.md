@@ -33,7 +33,7 @@
 - Apache Spark, Hadoop, Kafka, Hive, Azure Data Factory, SQL, NoSQL
 
 ### 📊 Advanced Analytics
-- Pandas, NumPy, R, Power BI, Tableau
+- Pandas, NumPy, R, Power BI
 
 ### 🚀 DevOps & MLOps
 - Docker, Kubernetes, Git, GitHub Actions, Azure DevOps Pipelines
@@ -60,7 +60,7 @@
 
 ## 🎓 Education & Credentials
 
-### 🎓 MSc Big Data Analytics *(Expected 2024)*  
+### 🎓 MSc Big Data Analytics *(Reading)*  
 **Robert Gordon University-Scotland, UK**  
 - 📜 Thesis: *"Optimizing LLM Agents for Enterprise Knowledge Management"*.
 
@@ -71,7 +71,7 @@
 ### 📜 Certifications
 - 🎖 **Microsoft Azure AI Engineer Associate**
 - 🎖 **Microsoft Azure Data Scientist Associate**
-- 🎖 **Databricks Certified Associate Developer for Apache Spark**
+- 🎖 **Generative AI with Large Language Models-DeepLearning.AI**
 
 ---
 
