@@ -6,19 +6,6 @@
 
 ---
 
-## 📌 Table of Contents
-
-- [📄 Professional Summary](#-professional-summary)
-- [🛠️ Technical Expertise](#-technical-expertise)
-- [💼 Professional Experience](#-professional-experience)
-- [🎓 Education & Credentials](#-education--credentials)
-- [🚀 Featured Projects](#-featured-projects)
-- [📞 Let's Connect](#-lets-connect)
-- [📊 GitHub Activity](#-github-activity)
-
-
----
-
 ## 📄 Professional Summary
 
 **Data & AI technologist** with 4+ years of experience delivering enterprise-grade machine learning solutions. Expert in transforming statistical insights into production-ready AI systems on **Azure Cloud**. Currently leading data innovation initiatives while completing an MSc in Big Data Analytics.
@@ -74,11 +61,11 @@
 ## 🎓 Education & Credentials
 
 ### 🎓 MSc Big Data Analytics *(Expected 2024)*  
-**Robert Gordon University**  
+**Robert Gordon University-Scotland, UK**  
 - 📜 Thesis: *"Optimizing LLM Agents for Enterprise Knowledge Management"*.
 
 ### 🎓 BSc (Hons) Applied Statistics  
-**University of Colombo**  
+**University of Colombo-Sri Lanka**  
 - 🏅 First Class Honors | GPA: **3.8/4.0**.
 
 ### 📜 Certifications
