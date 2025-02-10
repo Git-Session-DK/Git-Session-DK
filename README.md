@@ -2,7 +2,9 @@
 
 **🚀 Driving Business Impact with AI-Powered Innovations & Data-Driven Strategies**
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=flat&logo=linkedin)]([your-linkedin-url](https://www.linkedin.com/in/dumindu-kavinda)) [![Email](https://img.shields.io/badge/Email-Contact-red?style=flat&logo=gmail)](mailto:duminduk95@gmail.com) [![Portfolio](https://img.shields.io/badge/Portfolio-Website-orange?style=flat&logo=google-chrome)](your-portfolio-url)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/dumindu-kavinda) 
+[![Email](https://img.shields.io/badge/Email-Contact-red?style=flat&logo=gmail)](mailto:duminduk95@gmail.com) 
+[![Portfolio](https://img.shields.io/badge/Portfolio-Website-orange?style=flat&logo=google-chrome)](your-portfolio-url)
 
 ---
 
