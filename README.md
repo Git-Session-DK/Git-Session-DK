@@ -37,31 +37,12 @@ My academic credentials include an **MSc in Big Data Analytics** and a **BSc in 
 
 ---
 
-## 🚀 Featured Projects
-
-### 📦 AI-Powered Supply Chain Optimizer
-- Built a demand forecasting ensemble model with **92% accuracy**.
-- Integrated Azure Cognitive Services for NLP-based anomaly detection.
-- **Technologies:** Python, Spark ML, Azure Functions, Cosmos DB.
-
-### 💬 Enterprise Chatbot Framework
-- Developed a GPT-4 agent system handling **500+ daily support queries**.
-- Implemented a RAG architecture with Azure Cognitive Search.
-- Reduced support tickets by **45%** in pilot deployment.
-
-### 🔐 Real-Time Fraud Detection
-- Created a streaming ML pipeline processing **10K transactions/sec**.
-- Achieved a **98% recall rate** using XGBoost and Azure Stream Analytics.
-- **Architecture:** Kafka → Spark Streaming → Azure Synapse.
-
----
-
 ## 📞 Let's Connect
 
 Feel free to reach out via:
 
-- 🌐 **LinkedIn:** [Connect](your-linkedin-url)
-- ✉️ **Email:** [Contact](mailto:your.email@example.com)
+- 🌐 **LinkedIn:** [Connect](www.linkedin.com/in/dumindu-kavinda)
+- ✉️ **Email:** [Contact](mailto:duminduk95@gmail.com)
 - 📁 **Portfolio:** [Explore](your-portfolio-url)
 
 ---
