@@ -41,7 +41,7 @@ My academic credentials include an **MSc in Big Data Analytics** and a **BSc in 
 
 Feel free to reach out via:
 
-- 🌐 **LinkedIn:** [Connect](www.linkedin.com/in/dumindu-kavinda)
+- 🌐 **LinkedIn:** [Connect](https://www.linkedin.com/in/dumindu-kavinda)
 - ✉️ **Email:** [Contact](mailto:duminduk95@gmail.com)
 - 📁 **Portfolio:** [Explore](your-portfolio-url)
 
