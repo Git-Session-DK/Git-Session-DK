@@ -11,7 +11,7 @@
 ## 📄 About Me
 
 
-Accomplished Data & AI technologist with over 4 years of experience delivering enterprise-grade machine learning solutions and spearheading data-driven innovation. Adept at architecting and deploying cloud-native AI systems on Microsoft Azure, I have built transformative solutions such as the **AI HR Copilot and GenAI Insights Platform** to enhance the efficiency and productivity of HR professionals—an innovation featured in **Microsoft's AI Partner Program**. 
+Accomplished Data & AI technologist with over 5 years of experience delivering enterprise-grade machine learning solutions and spearheading data-driven innovation. Adept at architecting and deploying cloud-native AI systems on Microsoft Azure, I have built transformative solutions such as the **AI HR Copilot and GenAI Insights Platform** to enhance the efficiency and productivity of HR professionals—an innovation featured in **Microsoft's AI Partner Program**. 
 
 These AI-powered analytics products, have revolutionized HR operations by **automating complex tasks** such as generating employee letters, job descriptions, surveys, and evaluation forms with a single prompt. By enabling HR professionals to shift focus from routine tasks to strategic initiatives, and this product has **enhanced decision-making with high-level cognitive insights**—even addressing complex C-level inquiries—ultimately driving significant business impact and efficiency improvements.
 
