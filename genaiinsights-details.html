@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GenAI Insights Platform</title>
+  <meta name="description" content="GenAI Insights Platform leverages advanced AI and machine learning to convert natural language queries into dynamic SQL commands, transforming enterprise data interaction.">
+  <meta name="keywords" content="GenAI, Insights Platform, AI, Machine Learning, Azure Functions, SQL, Data Integration, NLP">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+    }
+    /* Header Section */
+    header {
+      background: url('https://source.unsplash.com/1600x900/?artificial,intelligence') no-repeat center center/cover;
+      background-blend-mode: multiply;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      padding: 120px 0;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+    }
+    header h2 {
+      font-size: 1.75rem;
+      font-weight: 300;
+      margin-top: 20px;
+    }
+    /* Section Titles */
+    .section-title {
+      margin-bottom: 50px;
+      text-align: center;
+    }
+    .section-title h3 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #007bff;
+    }
+    /* Feature Cards */
+    .feature-box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+      text-align: center;
+    }
+    .feature-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+    .feature-box i {
+      font-size: 3rem;
+      color: #007bff;
+      margin-bottom: 15px;
+    }
+    .feature-box h5 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    .feature-box p {
+      font-size: 1rem;
+      color: #666;
+    }
+    /* Architecture Cards */
+    .arch-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .arch-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+    .icon-circle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: #007bff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 15px;
+      color: #fff;
+      font-size: 2rem;
+    }
+    /* Flowchart Styles for How It Works */
+    .flowchart {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin: 30px 0;
+    }
+    .flowchart-box {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 10px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      flex: 1;
+      min-width: 200px;
+      max-width: 220px;
+    }
+    .flowchart-box .icon {
+      font-size: 2.5rem;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+    .flowchart-box h5 {
+      font-size: 1.25rem;
+      margin-bottom: 5px;
+      color: #007bff;
+    }
+    .flowchart-box p {
+      font-size: 0.9rem;
+      color: #666;
+    }
+    .arrow {
+      font-size: 2rem;
+      color: #007bff;
+      margin: 0 10px;
+    }
+    /* Fade-in Animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s ease forwards;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    /* Contact Section */
+    .contact a {
+      margin: 0 10px;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+    .contact a:hover {
+      color: #007bff;
+    }
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <h1 class="fade-in">GenAI Insights Platform</h1>
+      <h2 class="fade-in" style="animation-delay: 0.3s;">Transforming Enterprise Data Interaction with AI &amp; Machine Learning</h2>
+    </div>
+  </header>
+  
+  <!-- Overview Section -->
+  <section id="overview" class="container my-5">
+    <div class="section-title">
+      <h3 class="fade-in">Overview</h3>
+    </div>
+    <div class="row">
+      <div class="col-md-12 fade-in" style="animation-delay: 0.5s;">
+        <p>The GenAI Insights Platform is an enterprise-grade solution that revolutionizes how organizations interact with their data. Leveraging advanced AI and machine learning, it converts natural language queries into dynamic SQL commands – empowering HR professionals and business users to obtain actionable insights quickly and accurately.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Key Features Section -->
+  <section id="features" class="container my-5">
+    <div class="section-title">
+      <h3 class="fade-in">Key Features</h3>
+    </div>
+    <div class="row g-4">
+      <!-- Feature 1: Natural Language Query Generation -->
+      <div class="col-md-4 fade-in" style="animation-delay: 0.2s;">
+        <div class="feature-box h-100">
+          <i class="fas fa-comments"></i>
+          <h5>Natural Language Query Generation</h5>
+          <p>Advanced AI models convert user input into precise SQL queries, reducing manual effort and accelerating decision-making.</p>
+        </div>
+      </div>
+      <!-- Feature 2: Contextual Continuity -->
+      <div class="col-md-4 fade-in" style="animation-delay: 0.4s;">
+        <div class="feature-box h-100">
+          <i class="fas fa-stream"></i>
+          <h5>Contextual Continuity</h5>
+          <p>Maintains conversation history with a Redis-backed cache to ensure context-aware interactions and refined responses.</p>
+        </div>
+      </div>
+      <!-- Feature 3: Robust Data Integration -->
+      <div class="col-md-4 fade-in" style="animation-delay: 0.6s;">
+        <div class="feature-box h-100">
+          <i class="fas fa-database"></i>
+          <h5>Robust Data Integration</h5>
+          <p>Securely connects to enterprise SQL databases using pyodbc with Active Directory Managed Identity for authenticated data retrieval.</p>
+        </div>
+      </div>
+      <!-- Feature 4: Dynamic &amp; Humanistic Responses -->
+      <div class="col-md-4 fade-in" style="animation-delay: 0.8s;">
+        <div class="feature-box h-100">
+          <i class="fas fa-user-friends"></i>
+          <h5>Dynamic &amp; Humanistic Responses</h5>
+          <p>Transforms raw query results into user-friendly, HTML-formatted outputs with bullet-point summaries for easy interpretation.</p>
+        </div>
+      </div>
+      <!-- Feature 5: Advanced NLP &amp; Token Management -->
+      <div class="col-md-4 fade-in" style="animation-delay: 1s;">
+        <div class="feature-box h-100">
+          <i class="fas fa-brain"></i>
+          <h5>Advanced NLP &amp; Token Management</h5>
+          <p>Employs spaCy, fuzzywuzzy, and tiktoken to optimize prompt management, ensuring precise context and token compliance.</p>
+        </div>
+      </div>
+      <!-- Feature 6: Scalable &amp; Serverless Architecture -->
+      <div class="col-md-4 fade-in" style="animation-delay: 1.2s;">
+        <div class="feature-box h-100">
+          <i class="fas fa-cloud"></i>
+          <h5>Scalable &amp; Serverless Architecture</h5>
+          <p>Deployed as an Azure Function, the platform benefits from automatic scaling, high availability, and seamless cloud integration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+ <!-- Architecture Overview Section -->
+<section id="architecture" class="container my-5">
+    <div class="section-title text-center mb-5">
+      <h3 class="fade-in display-4 font-weight-bold text-primary">Architecture Overview</h3>
+      <p class="lead text-muted fade-in">A robust and scalable architecture for GenAI data insights.</p>
+    </div>
+    <div class="row justify-content-center fade-in">
+      <!-- Azure Functions -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body text-center">
+            <div class="icon-circle bg-primary mb-3">
+              <i class="fas fa-plug fa-2x text-white"></i>
+            </div>
+            <h4 class="card-title font-weight-bold">Azure Functions</h4>
+            <p class="card-text text-muted">Acts as the entry point for processing HTTP requests and orchestrating workflows.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Azure OpenAI -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body text-center">
+            <div class="icon-circle bg-info mb-3">
+              <i class="fas fa-robot fa-2x text-white"></i>
+            </div>
+            <h4 class="card-title font-weight-bold">Azure OpenAI</h4>
+            <p class="card-text text-muted">Generates dynamic SQL queries and humanistic responses using state-of-the-art language models.</p>
+          </div>
+        </div>
+      </div>
+      <!-- SQL Server Connectivity -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body text-center">
+            <div class="icon-circle bg-success mb-3">
+              <i class="fas fa-server fa-2x text-white"></i>
+            </div>
+            <h4 class="card-title font-weight-bold">SQL Server</h4>
+            <p class="card-text text-muted">Connects securely to enterprise SQL databases using pyodbc with Active Directory Managed Identity.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Redis Cache -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body text-center">
+            <div class="icon-circle bg-warning mb-3">
+              <i class="fas fa-memory fa-2x text-white"></i>
+            </div>
+            <h4 class="card-title font-weight-bold">Redis Cache</h4>
+            <p class="card-text text-muted">Stores conversation history and context as a compressed DataFrame for seamless session management.</p>
+          </div>
+        </div>
+      </div>
+      <!-- NLP & Similarity Matching -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body text-center">
+            <div class="icon-circle bg-danger mb-3">
+              <i class="fas fa-brain fa-2x text-white"></i>
+            </div>
+            <h4 class="card-title font-weight-bold">NLP &amp; Matching</h4>
+            <p class="card-text text-muted">Extracts keywords and computes similarity using spaCy and fuzzywuzzy.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Prompt Optimization -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body text-center">
+            <div class="icon-circle bg-secondary mb-3">
+              <i class="fas fa-sliders-h fa-2x text-white"></i>
+            </div>
+            <h4 class="card-title font-weight-bold">Prompt Optimization</h4>
+            <p class="card-text text-muted">Uses tiktoken to manage token limits while retaining essential context in prompts.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+ <!-- How It Works Section with Flowchart -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>How It Works Flowchart</title>
+   <!-- Font Awesome for icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+   <!-- Google Fonts -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
+   <style>
+     /* Global Styles */
+     * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+     }
+ 
+     body {
+       font-family: 'Roboto', sans-serif;
+       background: #f4f7f9;
+       color: #333;
+       line-height: 1.6;
+       padding: 20px;
+     }
+ 
+     .container {
+       max-width: 1200px;
+       margin: auto;
+       padding: 20px;
+     }
+ 
+     /* Section Title */
+     .section-title {
+       text-align: center;
+       margin-bottom: 50px;
+     }
+ 
+     .section-title h3 {
+       font-size: 2.5rem;
+       font-weight: 700;
+       position: relative;
+       display: inline-block;
+       padding-bottom: 10px;
+     }
+ 
+     .section-title h3::after {
+       content: '';
+       position: absolute;
+       width: 60%;
+       height: 3px;
+       background: #3498db;
+       bottom: 0;
+       left: 50%;
+       transform: translateX(-50%);
+     }
+ 
+     /* Flowchart Styles */
+     .flowchart {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       flex-wrap: wrap;
+     }
+ 
+     .flowchart-box {
+       background: #fff;
+       border: 2px solid #3498db;
+       border-radius: 10px;
+       padding: 20px;
+       margin: 10px;
+       width: 220px;
+       text-align: center;
+       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+       transition: transform 0.3s ease, box-shadow 0.3s ease;
+     }
+ 
+     .flowchart-box:hover {
+       transform: translateY(-5px);
+       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+     }
+ 
+     .flowchart-box .icon {
+       font-size: 2.5rem;
+       color: #3498db;
+       margin-bottom: 10px;
+     }
+ 
+     .flowchart-box h5 {
+       font-size: 1.2rem;
+       margin-bottom: 10px;
+     }
+ 
+     .flowchart-box p {
+       font-size: 0.95rem;
+       color: #666;
+     }
+ 
+     /* Arrow Styles */
+     .arrow {
+       font-size: 2rem;
+       color: #3498db;
+       margin: 0 10px;
+     }
+ 
+     /* Fade-in Animation */
+     .fade-in {
+       opacity: 0;
+       animation: fadeIn 1s forwards;
+     }
+ 
+     /* Each element can have a slight delay */
+     .flowchart .fade-in {
+       animation-delay: 0.3s;
+     }
+ 
+     @keyframes fadeIn {
+       to {
+         opacity: 1;
+       }
+     }
+ 
+     /* Responsive Design */
+     @media (max-width: 768px) {
+       .flowchart {
+         flex-direction: column;
+       }
+ 
+       .arrow {
+         transform: rotate(90deg);
+         margin: 20px 0;
+       }
+     }
+   </style>
+ </head>
+ <body>
+   <section id="how-it-works" class="container my-5">
+     <div class="section-title">
+       <h3 class="fade-in">How It Works</h3>
+     </div>
+     <div class="flowchart fade-in" style="animation-delay: 0.3s;">
+       <!-- Step 1: User Input -->
+       <div class="flowchart-box">
+         <div class="icon"><i class="fas fa-keyboard"></i></div>
+         <h5>User Input</h5>
+         <p>Submit your natural language query via an HTTP request.</p>
+       </div>
+       <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+       <!-- Step 2: Context Retrieval -->
+       <div class="flowchart-box">
+         <div class="icon"><i class="fas fa-history"></i></div>
+         <h5>Context Retrieval</h5>
+         <p>Fetch conversation history from Redis.</p>
+       </div>
+       <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+       <!-- Step 3: Query Generation -->
+       <div class="flowchart-box">
+         <div class="icon"><i class="fas fa-cogs"></i></div>
+         <h5>Query Generation</h5>
+         <p>Azure OpenAI generates multiple SQL query suggestions.</p>
+       </div>
+       <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+       <!-- Step 4: Validation & Execution -->
+       <div class="flowchart-box">
+         <div class="icon"><i class="fas fa-check-circle"></i></div>
+         <h5>Validation &amp; Execution</h5>
+         <p>Select the best query using fuzzy matching and execute it.</p>
+       </div>
+       <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+       <!-- Step 5: Humanistic Response -->
+       <div class="flowchart-box">
+         <div class="icon"><i class="fas fa-smile"></i></div>
+         <h5>Humanistic Response</h5>
+         <p>Transform raw results into a user-friendly HTML output.</p>
+       </div>
+       <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+       <!-- Step 6: Response Delivery -->
+       <div class="flowchart-box">
+         <div class="icon"><i class="fas fa-paper-plane"></i></div>
+         <h5>Response Delivery</h5>
+         <p>Return the final JSON response with insights and metrics.</p>
+       </div>
+     </div>
+   </section>
+ </body>
+ </html>
+ 
+  
+<!-- Technologies Used Section -->
+<section id="technologies" class="container my-5">
+    <div class="section-title">
+      <h3 class="fade-in">Technologies Used</h3>
+    </div>
+    <div class="row text-center">
+      <div class="col-md-2 fade-in" style="animation-delay: 0.2s;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" class="tech-icon img-fluid mb-2">
+        <p>Python</p>
+      </div>
+      <div class="col-md-2 fade-in" style="animation-delay: 0.4s;">
+        <img src="https://coralogix.com/wp-content/uploads/2023/02/azurefunctions-1000X1000.png" alt="Azure Functions" class="tech-icon img-fluid mb-2">
+        <p>Azure Functions</p>
+      </div>
+      <div class="col-md-2 fade-in" style="animation-delay: 0.6s;">
+        <img src="https://th.bing.com/th/id/OIP.vavoc8cDEEF29H7bX8kxjQHaHa?rs=1&pid=ImgDetMain" alt="Azure OpenAI" class="tech-icon img-fluid mb-2">
+        <p>Azure OpenAI</p>
+      </div>
+      <div class="col-md-2 fade-in" style="animation-delay: 0.8s;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Logo-redis.svg/640px-Logo-redis.svg.png" alt="Redis" class="tech-icon img-fluid mb-2">
+        <p>Redis</p>
+      </div>
+      <div class="col-md-2 fade-in" style="animation-delay: 1s;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="SQL Server" class="tech-icon img-fluid mb-2">
+        <p>SQL Server</p>
+      </div>
+      <div class="col-md-2 fade-in" style="animation-delay: 1.2s;">
+        <img src="https://th.bing.com/th/id/OIP.cEVm1erjyCdkJ7e0MiSlLgAAAA?rs=1&pid=ImgDetMain" alt="NLP Tools" class="tech-icon img-fluid mb-2">
+        <p>spaCy, fuzzywuzzy, tiktoken</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Additional CSS -->
+  <style>
+    .tech-icon {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin: 0 auto;
+    }
+  </style>
+  
+  
+  <!-- Conclusion Section -->
+  <section id="conclusion" class="container my-5">
+    <div class="section-title">
+      <h3 class="fade-in">Conclusion</h3>
+    </div>
+    <div class="fade-in" style="animation-delay: 0.3s;">
+      <p>GenAI Insights Platform redefines data interaction by bridging natural language with structured SQL queries. With its robust architecture and advanced AI capabilities, organizations can derive actionable insights, streamline HR operations, and drive data-driven decision making.</p>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section id="contact" class="container text-center my-5">
+    <div class="section-title">
+      <h3 class="fade-in">Contact Us</h3>
+    </div>
+    <div class="fade-in" style="animation-delay: 0.3s;">
+      <p>Interested in learning more or collaborating on data transformation projects? Reach out to us today!</p>
+      <a href="mailto:contact@genaiinsights.com" class="btn btn-outline-primary m-2">
+        <i class="fas fa-envelope"></i> Email Us
+      </a>
+      <a href="https://github.com/GenAIInsights" class="btn btn-outline-secondary m-2">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+    </div>
+  </section>
+  
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 GenAI Insights Platform. All Rights Reserved.</p>
+      <div class="contact">
+        <a href="https://twitter.com/GenAIInsights" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/company/genaiinsights" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Trigger fade-in animations on scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+      threshold: 0.2,
+      rootMargin: "0px 0px -50px 0px"
+    };
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.style.animationDelay = entry.target.getAttribute('data-delay') || '0s';
+        entry.target.classList.add('appear');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+</body>
+</html>

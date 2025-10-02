@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NBA Data Analysis and Machine Learning Project</title>
+  <meta name="description" content="Analyze NBA play-by-play data from the 2000-2001 season using Big Data technologies and Machine Learning models to derive game insights and forecast player performance.">
+  <meta name="keywords" content="NBA, Big Data, Machine Learning, Hadoop, Apache Hive, Apache Spark, PySpark MLlib, Power BI, Sports Analytics">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Custom Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+    }
+    header {
+      background: url('https://source.unsplash.com/1600x900/?basketball,court') no-repeat center center/cover;
+      background-blend-mode: multiply;
+      background-color: rgba(37, 117, 252, 0.8);
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+    }
+    header h2 {
+      font-size: 2rem;
+      font-weight: 300;
+      margin-top: 20px;
+    }
+    /* Update section title color to blue */
+    .section-title h3 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+      color: #007bff;
+    }
+    /* Ensure all h3 titles in other sections are blue */
+    h3 {
+      color: #007bff;
+    }
+    .feature-box {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+      text-align: center;
+    }
+    .feature-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+    .feature-box i {
+      font-size: 2.5rem;
+      color: #2575fc;
+      margin-bottom: 20px;
+    }
+    .feature-box h5 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+    .feature-box p {
+      font-size: 1rem;
+      color: #666;
+    }
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .tech-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 120px;
+      transition: transform 0.3s ease;
+    }
+    .tech-item:hover {
+      transform: scale(1.1);
+    }
+    .tech-item img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+    .tech-item p {
+      font-size: 1rem;
+      color: #333;
+    }
+    footer {
+      background: #333;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    footer p {
+      margin: 0;
+    }
+    .social-links a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .social-links a:hover {
+      color: #2575fc;
+    }
+    /* Fade-in Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in {
+      animation: fadeIn 1s ease-out;
+    }
+    /* Styles for Architecture Cards (unchanged) */
+    .icon-circle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+    }
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <h1 class="fade-in">NBA Data Analysis &amp; ML Project</h1>
+      <h2 class="fade-in">Unlocking Game Insights with Big Data &amp; Predictive Analytics</h2>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6 fade-in">
+        <h3>About the Project</h3>
+        <p>This project focuses on analyzing NBA play-by-play data from the 2000-2001 season using Big Data technologies and Machine Learning models. The goal is to derive insights into team performance, player statistics, and game outcomes, while building predictive models to forecast player performance based on historical data.</p>
+      </div>
+      <div class="col-md-6 text-center fade-in">
+        <img src="https://th.bing.com/th/id/OIP.ZQiNJZmWeIqz1kjKiqLPqgHaEK?w=274&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" class="img-fluid rounded" alt="NBA Analysis">
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="container my-5">
+    <div class="section-title text-center">
+      <h3 class="fade-in">Key Features</h3>
+    </div>
+    <div class="row g-4 text-center">
+      <div class="col-md-4 fade-in">
+        <div class="feature-box h-100">
+          <i class="fas fa-database"></i>
+          <h5>Big Data Processing</h5>
+          <p>Utilizes Hadoop MapReduce, Apache Hive, and Apache Spark for large-scale data processing and analysis.</p>
+        </div>
+      </div>
+      <div class="col-md-4 fade-in">
+        <div class="feature-box h-100">
+          <i class="fas fa-chart-line"></i>
+          <h5>Data Analysis</h5>
+          <p>Identifies scoring trends, top teams, average points, and calculates match statistics such as most scoring quarter and total points by top players.</p>
+        </div>
+      </div>
+      <div class="col-md-4 fade-in">
+        <div class="feature-box h-100">
+          <i class="fas fa-robot"></i>
+          <h5>Machine Learning</h5>
+          <p>Predicts player performance using Linear Regression, Random Forest, and Gradient Boosting models, evaluated with RMSE.</p>
+        </div>
+      </div>
+      <div class="col-md-4 fade-in">
+        <div class="feature-box h-100">
+          <i class="fas fa-project-diagram"></i>
+          <h5>Interactive Predictions</h5>
+          <p>Enables specific predictions (e.g., Allen Iverson vs. Los Angeles Lakers) to assist in strategic decision-making.</p>
+        </div>
+      </div>
+      <div class="col-md-4 fade-in">
+        <div class="feature-box h-100">
+          <i class="fas fa-bolt"></i>
+          <h5>Real-time &amp; Batch Processing</h5>
+          <p>Ingests NBA data via Apache Kafka and processes it through both batch (MapReduce, Hive) and real-time (Spark Streaming) layers.</p>
+        </div>
+      </div>
+      <div class="col-md-4 fade-in">
+        <div class="feature-box h-100">
+          <i class="fas fa-eye"></i>
+          <h5>Interactive Visualization</h5>
+          <p>Creates interactive dashboards with Power BI for visualizing key insights such as top teams and scoring trends.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Stack Section -->
+  <section id="tech-stack" class="container my-5">
+    <div class="section-title text-center">
+      <h3 class="fade-in">Technology Stack</h3>
+    </div>
+    <div class="tech-stack fade-in">
+      <div class="tech-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Hadoop_logo.svg/996px-Hadoop_logo.svg.png?20130221043911" alt="Hadoop">
+        <p>Hadoop</p>
+      </div>
+      <div class="tech-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Apache_Hive_logo.svg/langfr-180px-Apache_Hive_logo.svg.png" alt="Apache Hive">
+        <p>Hive</p>
+      </div>
+      <div class="tech-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Apache_Spark_logo.svg" alt="Apache Spark">
+        <p>Spark</p>
+      </div>
+      <div class="tech-item">
+        <img src="https://th.bing.com/th/id/R.002878c853fedc6129c1e51bc8c096c1?rik=%2bViukjPTqI4pvQ&pid=ImgRaw&r=0" alt="Docker">
+        <p>Docker</p>
+      </div>
+      <div class="tech-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python">
+        <p>Python</p>
+      </div>
+      <div class="tech-item">
+        <img src="data:image/jpeg;base64,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" alt="Power BI">
+        <p>Power BI</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture Overview Section -->
+  <section id="architecture" class="container my-5">
+    <div class="section-title text-center mb-5">
+      <h3 class="fade-in display-4 font-weight-bold text-primary">Architecture Overview</h3>
+      <p class="lead text-muted fade-in">A scalable and efficient architecture for NBA data analytics.</p>
+    </div>
+    <div class="row justify-content-center fade-in">
+      <!-- Data Ingestion -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body text-center">
+            <div class="icon-circle bg-primary mb-3">
+              <i class="fas fa-cloud-upload-alt fa-2x text-white"></i>
+            </div>
+            <h4 class="card-title font-weight-bold">Data Ingestion</h4>
+            <p class="card-text text-muted">NBA play-by-play data is ingested via Apache Kafka and stored in HDFS.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Batch Layer -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body text-center">
+            <div class="icon-circle bg-success mb-3">
+              <i class="fas fa-database fa-2x text-white"></i>
+            </div>
+            <h4 class="card-title font-weight-bold">Batch Layer</h4>
+            <p class="card-text text-muted">Historical data is processed using Hadoop MapReduce and Apache Hive.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Speed Layer -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body text-center">
+            <div class="icon-circle bg-info mb-3">
+              <i class="fas fa-bolt fa-2x text-white"></i>
+            </div>
+            <h4 class="card-title font-weight-bold">Speed Layer</h4>
+            <p class="card-text text-muted">Real-time analytics powered by Spark Streaming.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Serving Layer -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body text-center">
+            <div class="icon-circle bg-warning mb-3">
+              <i class="fas fa-cogs fa-2x text-white"></i>
+            </div>
+            <h4 class="card-title font-weight-bold">Serving Layer</h4>
+            <p class="card-text text-muted">Azure Synapse Analytics combines batch and real-time results.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Visualization Layer -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body text-center">
+            <div class="icon-circle bg-danger mb-3">
+              <i class="fas fa-chart-bar fa-2x text-white"></i>
+            </div>
+            <h4 class="card-title font-weight-bold">Visualization Layer</h4>
+            <p class="card-text text-muted">Interactive dashboards built with Power BI.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Key Insights Section -->
+  <section id="insights" class="container my-5">
+    <div class="section-title text-center">
+      <h3 class="fade-in">Key Insights</h3>
+    </div>
+    <div class="fade-in">
+      <ul>
+        <li><strong>Team Performance:</strong> Identifies top-performing teams and scoring patterns per quarter.</li>
+        <li><strong>Player Performance:</strong> Highlights highest-scoring players and their contributions.</li>
+        <li><strong>Game Outcomes:</strong> Analyzes wins, losses, and overall team strengths and weaknesses.</li>
+        <li><strong>Predictive Analytics:</strong> Forecasts player performance against specific opponents.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Why This Project Section -->
+  <section id="why-project" class="container my-5">
+    <div class="section-title text-center">
+      <h3 class="fade-in">Why This Project?</h3>
+    </div>
+    <div class="fade-in">
+      <p>This project demonstrates the power of Big Data and Machine Learning in sports analytics. By leveraging large-scale data processing and predictive modeling, it provides actionable insights for team managers, coaches, and analysts to make data-driven decisions.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container text-center my-5">
+    <div class="section-title">
+      <h3 class="fade-in">Contact Us</h3>
+    </div>
+    <div class="fade-in">
+      <p>If you're interested in learning more about this project or collaborating, feel free to reach out.</p>
+      <a href="mailto:contact@nbaproject.com" class="btn btn-outline-primary">
+        <i class="fas fa-envelope"></i> Email Us
+      </a>
+      <a href="https://github.com/NBAProjectRepo" class="btn btn-outline-secondary">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="text-center">
+    <div class="container">
+      <p>&copy; 2025 NBA Data Analysis &amp; ML Project. All Rights Reserved.</p>
+      <div class="social-links">
+        <a href="https://twitter.com/NBAProject" target="_blank"><i class="fab fa-twitter mx-2"></i></a>
+        <a href="https://www.linkedin.com/company/nbaproject" target="_blank"><i class="fab fa-linkedin mx-2"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Fade-in animation on scroll
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+    fadeElements.forEach(element => {
+      element.style.opacity = 0;
+      element.style.transform = 'translateY(20px)';
+      observer.observe(element);
+    });
+  </script>
+</body>
+</html>
