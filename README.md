@@ -50,9 +50,3 @@ Feel free to reach out via:
 - 📁 **Portfolio:** [Explore](your-portfolio-url)
 
 ---
-
-## 📊 GitHub Activity
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Git-Session-DK&show_icons=true&hide_border=true&theme=merko&cache_seconds=1800)
-
-[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Git-Session-DK&layout=compact&theme=merko)](https://github.com/Git-Session-DK)
